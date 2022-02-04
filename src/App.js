@@ -1,10 +1,9 @@
 import React from "react";
-import HelloWorld from "./components/HelloWorld";
-import RenderForm from "./components/RenderForm";
 import SideBar from './components/SideBar';
 import { connect } from "react-redux";
 
 import Header from "./components/Header";
+import RoutesComponent from "./routing/router";
 
 const App = (props) => {
   return (
@@ -12,6 +11,7 @@ const App = (props) => {
       <div>
       <Header />
       <SideBar />
+      <RoutesComponent />
       </div>
     </div>
   );
@@ -24,11 +24,11 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = dispatch => {
-  return {
-    increaseCounter: () => dispatch(increaseCounter()),
+  // return {
+  //   increaseCounter: () => dispatch(increaseCounter()),
 
-    decreaseCounter: () => dispatch(decreaseCounter()),
-  }
+  //   decreaseCounter: () => dispatch(decreaseCounter()),
+  // }
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

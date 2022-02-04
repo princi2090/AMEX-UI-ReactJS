@@ -9,6 +9,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
+import Link from '@mui/material/Link';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
@@ -18,6 +19,7 @@ import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import Header from './Header';
+import { SIDEBAR_NAVS } from '../utils/constants';
 
 const drawerWidth = 240;
 
@@ -86,21 +88,23 @@ export default function SideBar() {
             {/* <CssBaseline /> */}
             <Drawer variant="permanent" open={open}>
                 <DrawerHeader>
-                    <IconButton sx={{marginTop: '50px'}} onClick={open ? handleDrawerClose : handleDrawerOpen}>
-                    {open ? <ChevronLeftIcon /> : <ChevronRightIcon />}
+                    <IconButton sx={{ marginTop: '60px' }} onClick={open ? handleDrawerClose : handleDrawerOpen}>
+                        {open ? <ChevronLeftIcon /> : <ChevronRightIcon />}
 
                         {/* {theme.direction === 'ltr' ? <ChevronRightIcon /> : <ChevronLeftIcon />} */}
                     </IconButton>
                 </DrawerHeader>
                 <Divider />
                 <List>
-                    {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                        <ListItem button key={text}>
-                            <ListItemIcon>
-                                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                            </ListItemIcon>
-                            <ListItemText primary={text} />
-                        </ListItem>
+                    {SIDEBAR_NAVS.map((navs, index) => (
+                        <Link href={navs.path}>
+                            <ListItem button key={navs.name}>
+                                <ListItemIcon>
+                                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                                </ListItemIcon>
+                                <ListItemText to='/' primary={navs.name} />
+                            </ListItem>
+                        </Link>
                     ))}
                 </List>
                 <Divider />
