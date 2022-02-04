@@ -1,9 +1,9 @@
 import React from "react";
 import SideBar from './components/SideBar';
 import { connect } from "react-redux";
-
 import Header from "./components/Header";
 import RoutesComponent from "./routing/router";
+import {TableDemo} from "./components/TableDemo"
 
 const App = (props) => {
   return (
@@ -12,6 +12,7 @@ const App = (props) => {
       <Header />
       <SideBar />
       <RoutesComponent />
+      <TableDemo/>
       </div>
     </div>
   );
