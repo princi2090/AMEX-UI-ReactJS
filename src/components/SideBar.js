@@ -97,7 +97,7 @@ export default function SideBar() {
                 <Divider />
                 <List>
                     {SIDEBAR_NAVS.map((navs, index) => (
-                        <Link href={navs.path}>
+                        <Link href={navs.path} key={index}>
                             <ListItem button key={navs.name}>
                                 <ListItemIcon>
                                     {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
