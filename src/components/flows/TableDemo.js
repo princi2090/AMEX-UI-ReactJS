@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import MaterialTable from 'material-table';
 import "../../styles/TableStyle.css"
 
+import api_service from '../../services/api_service';
+import { api_urls } from '../../services/api_urls';
+
 const columns = [
 
     /* dummy field names are used */
@@ -17,6 +20,13 @@ export const TableDemo = () => {
         fetch("https://jsonplaceholder.typicode.com/users")
             .then((data) => data.json())
             .then((data) => { setTableData(data) })
+    }, []);
+
+    useEffect( () => {
+        const res = api_service.get({
+            baseURL: api_urls.url1
+        });
+        console.log(res);
     }, [])
 
     return <div className='table'>
