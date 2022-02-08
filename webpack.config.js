@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const webpack = require("webpack");
 
 module.exports = {
   entry: path.join(__dirname, "src", "index.js"),
@@ -34,5 +35,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.join(__dirname, "src", "index.html"),
     }),
+    new webpack.DefinePlugin({
+      BASE_URL: JSON.stringify("https://cat-fact.herokuapp.com"),
+    })
   ],
 };
