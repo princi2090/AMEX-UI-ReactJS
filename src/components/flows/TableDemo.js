@@ -23,10 +23,11 @@ export const TableDemo = () => {
     }, []);
 
     useEffect( () => {
-        const res = api_service.get({
+        api_service.get({
             baseURL: api_urls.url1
+        }).then((res) => {
+            console.log(res);
         });
-        console.log(res);
     }, [])
 
     return <div className='table'>

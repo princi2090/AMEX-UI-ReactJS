@@ -5,20 +5,21 @@ import axios from "axios";
 class ApiService {
 
     get = (data) => {
-        axios({
+        return axios({
             url: data.baseURL,
             method: "GET",
             headers: {
                 authorization: "your token comes here",
             },
             data: data.payload,
-        }).then((res) => {
-            console.log(res);
-            return res;
-        }).catch((err) => {
-            console.log(err);
-            return err;
         });
+        // .then((res) => {
+        //     console.log(res);
+        //     return res;
+        // }).catch((err) => {
+        //     console.log(err);
+        //     return err;
+        // });
 
     };
 }
