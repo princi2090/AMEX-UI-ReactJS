@@ -19,13 +19,13 @@ export const TableDemo=()=> {
         .then((data)=>{setTableData(data)})
     },[])
     
-  return <div className='table'>
+  return <div  className='table'>
         <MaterialTable title="Flows"
         data={data}
         columns={columns}
         options={{
             filtering: true,
-            sorting: false
+            sorting: true
         }}
         />
   </div>;

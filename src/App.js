@@ -4,6 +4,8 @@ import { connect } from "react-redux";
 import Header from "./components/Header";
 import RoutesComponent from "./routing/router";
 import {TableDemo} from "./components/TableDemo"
+import {TableDemo1} from "./components/TableDemo1"
+import TableDemo2 from "./components/TableDemo2"
 
 const App = (props) => {
   return (
@@ -12,7 +14,9 @@ const App = (props) => {
       <Header />
       <SideBar />
       <RoutesComponent />
-      <TableDemo/>
+       <TableDemo/> 
+       {/* <TableDemo1/> */}
+      {/* <TableDemo2/> */}
       </div>
     </div>
   );

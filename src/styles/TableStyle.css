@@ -1,4 +1,10 @@
 .table{
-    margin-left: 150px;
+    margin-left: 70px;
     margin-top: 10px;
+    overflow: auto;
+}
+
+.MuiPaper-root{
+
+    background-color: #0000FF !important;
 }
