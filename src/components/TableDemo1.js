@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -8,18 +8,23 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import "../styles/TableStyle.css"
 
+import api_service from '../services/api_service';
+import { api_urls } from '../services/api_urls';
 
-export const TableDemo1=()=> {
-    
-    const [data,setTableData]=useState([]);
-    useEffect(()=>{
-        fetch("https://jsonplaceholder.typicode.com/users")
-        .then((data)=>data.json())
-        .then((data)=>{setTableData(data)})
-    },[])
+
+export const TableDemo1 = () => {
+
+  const [data, setTableData] = useState([]);
+  useEffect(() => {
+    api_service.get({
+      baseURL: api_urls.flow_url
+    }).then((res) => {
+      setTableData(res.data)
+    });
+  }, [])
 
   return <div className='table'>
-      <TableContainer component={Paper}>
+    <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
