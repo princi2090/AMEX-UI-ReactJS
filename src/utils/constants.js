@@ -9,10 +9,10 @@ export const SIDEBAR_NAVS = [
         name: 'Flows',
         path: '/flows'
     },
-    {
-        name: 'Maps',
-        path: '/maps'
-    },
+    // {
+    //     name: 'Maps',
+    //     path: '/maps'
+    // },
     {
         name:'Flowchart',
         path:'/recipe'

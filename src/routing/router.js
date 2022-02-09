@@ -7,7 +7,7 @@ import {
 import Dashboard from "../components/dashboard";
 import Flows from "../components/flows/flows";
 import { FLOW_COMPONENT } from './../utils/pagesConstants';
-import Flowchart from "./components/Flowchart"
+import Flowchart from "./../components/Flowchart"
 
 export default function RoutesComponent() {
     return (
