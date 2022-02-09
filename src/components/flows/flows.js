@@ -1,11 +1,11 @@
 import React from "react";
-import {TableDemo} from './TableDemo';
+import {TableDemo1} from '../TableDemo1';
 
 const Flows = () => {
   return (
     <div>
       Transformation Flows
-      <TableDemo />
+      <TableDemo1 />
     </div>
   );
 };

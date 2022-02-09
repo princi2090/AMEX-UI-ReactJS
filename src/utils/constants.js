@@ -12,5 +12,9 @@ export const SIDEBAR_NAVS = [
     {
         name: 'Maps',
         path: '/maps'
+    },
+    {
+        name:'Flowchart',
+        path:'/recipe'
     }
 ];

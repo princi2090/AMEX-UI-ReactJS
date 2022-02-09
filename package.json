@@ -34,6 +34,7 @@
     "material-table": "^1.69.3",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-flow-renderer": "^9.7.3",
     "react-redux": "^7.2.6",
     "react-router-dom": "^6.2.1",
     "redux": "^4.1.2"
