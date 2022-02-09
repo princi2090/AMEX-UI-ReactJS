@@ -1,9 +1,13 @@
 import React from "react";
 import SideBar from './components/SideBar';
 import { connect } from "react-redux";
-
 import Header from "./components/Header";
 import RoutesComponent from "./routing/router";
+import {TableDemo} from "./components/TableDemo"
+import {TableDemo1} from "./components/TableDemo1"
+import TableDemo2 from "./components/TableDemo2"
+import {Flowchart} from "./components/Flowchart"
+
 
 const App = (props) => {
   return (
@@ -12,6 +16,10 @@ const App = (props) => {
       <Header />
       <SideBar />
       <RoutesComponent />
+       {/* <TableDemo/>  */}
+       {/* <TableDemo1/> */}
+       {/* <Flowchart/> */}
+      {/* <TableDemo2/> */}
       </div>
     </div>
   );
@@ -24,6 +32,7 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = dispatch => {
+  return {};
   // return {
   //   increaseCounter: () => dispatch(increaseCounter()),
 

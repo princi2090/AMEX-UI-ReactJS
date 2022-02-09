@@ -97,7 +97,7 @@ export default function SideBar() {
                 <Divider />
                 <List>
                     {SIDEBAR_NAVS.map((navs, index) => (
-                        <Link href={navs.path}>
+                        <Link href={navs.path} key={index}>
                             <ListItem button key={navs.name}>
                                 <ListItemIcon>
                                     {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
@@ -108,7 +108,7 @@ export default function SideBar() {
                     ))}
                 </List>
                 <Divider />
-                <List>
+                {/* <List>
                     {['All mail', 'Trash', 'Spam'].map((text, index) => (
                         <ListItem button key={text}>
                             <ListItemIcon>
@@ -117,7 +117,7 @@ export default function SideBar() {
                             <ListItemText primary={text} />
                         </ListItem>
                     ))}
-                </List>
+                </List> */}
             </Drawer>
             <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
                 <DrawerHeader />
