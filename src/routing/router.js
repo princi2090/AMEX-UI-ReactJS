@@ -18,7 +18,7 @@ export default function RoutesComponent() {
                     </Route>
                     <Route path={FLOW_COMPONENT} element={<Flows />}>
                     </Route>
-                    <Route path="/recipe" element={<Flowchart/>}>
+                    <Route path="/job" element={<Flowchart/>}>
                     </Route>
                 </Routes>
             </div>

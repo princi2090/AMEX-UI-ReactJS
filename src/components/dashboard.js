@@ -2,7 +2,7 @@ import React from "react";
 
 const Dashboard = () => {
   return (
-    <div>
+    <div style={{alignItems:'center',marginLeft:'120px'}}>
       Dashboard Screen
     </div>
   );
