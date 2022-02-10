@@ -6,20 +6,22 @@ import LanSharpIcon from '@mui/icons-material/LanSharp';
 import List from '@mui/material/List';
 import StorageTwoToneIcon from '@mui/icons-material/StorageTwoTone';
 import Typography from '@mui/material/Typography';
-import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import Link from '@mui/material/Link';
-import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
 import Header from './Header';
 import { SIDEBAR_NAVS} from '../utils/constants';
 import DashboardIcon from '@mui/icons-material/Dashboard';
+import AddCardIcon from '@mui/icons-material/AddCard';
+import DeviceHubIcon from '@mui/icons-material/DeviceHub';
+import ApartmentIcon from '@mui/icons-material/Apartment';
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import TodayIcon from '@mui/icons-material/Today';
+import CheckBoxIcon from '@mui/icons-material/CheckBox';
 
 const drawerWidth = 240;
 
@@ -99,17 +101,14 @@ export default function SideBar() {
                         <Link href={navs.path} key={index}>
                             <ListItem button key={navs.name}>
                                 <ListItemIcon>
-                                    {/* {index % 2 === 0 ? <InboxIcon /> : <MailIcon />} */}
-                                    {/* {<InboxIcon />}
-                                    {<MailIcon />} */}
-                                   {index===0 ? <MailIcon/>:null}
+                                   {index===0 ? <AddCardIcon/>:null}
                                    {index===1 ? <LanSharpIcon/>:null}
-                                   {index===2 ? <DashboardIcon/>:null}
-                                   {index===3 ? <DashboardIcon/>:null}
+                                   {index===2 ? <DeviceHubIcon/>:null}
+                                   {index===3 ? <ApartmentIcon/>:null}
                                    {index===4 ? <StorageTwoToneIcon/>:null}
-                                   {index===5 ? <DashboardIcon/>:null}
-                                   {index===6 ? <DashboardIcon/>:null}
-                                   {index===7 ? <MailIcon/>:null} 
+                                   {index===5 ? <AccessTimeIcon/>:null}
+                                   {index===6 ? <TodayIcon/>:null}
+                                   {index===7 ? <CheckBoxIcon/>:null} 
                                 </ListItemIcon>
                                 <ListItemText to='/' primary={navs.name} />
                             </ListItem>
