@@ -22,6 +22,7 @@ export const TableDemo1 = () => {
     api_service.get({
       baseURL: api_urls.flow_url
     }).then((res) => {
+      console.log('response data: ', res);
       setTableData(res.data)
     });
   }, [])

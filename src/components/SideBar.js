@@ -128,10 +128,10 @@ export default function SideBar() {
             </Drawer>
             <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
                 <DrawerHeader />
-                <Typography paragraph>
+                {/* <Typography paragraph>
                 </Typography>
                 <Typography paragraph>
-                </Typography>
+                </Typography> */}
             </Box>
         </Box>
     );
