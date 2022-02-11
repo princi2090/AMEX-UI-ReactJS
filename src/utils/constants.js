@@ -29,7 +29,7 @@ const SIDEBAR_NAVS = [
     },
     {
         name:'Job History',
-        path:'/job History'
+        path:'/jobHistory'
     },
     {
         name:'Scheduler',
