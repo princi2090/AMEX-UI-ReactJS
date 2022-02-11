@@ -7,12 +7,15 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import "../styles/TableStyle.css"
-
+import {useNavigate} from "react-router-dom";
 import api_service from '../services/api_service';
 import { api_urls } from '../services/api_urls';
+import Flowchart from './Flowchart';
 
 
 export const TableDemo1 = () => {
+
+  const navigate=useNavigate();
 
   const [data, setTableData] = useState([]);
   useEffect(() => {
@@ -22,6 +25,11 @@ export const TableDemo1 = () => {
       setTableData(res.data)
     });
   }, [])
+
+  // const clickHandler=()=>{
+  //   console.log("Hello");
+                    
+  // }
 
   return <div className='table'>
     <TableContainer component={Paper}>
@@ -40,10 +48,13 @@ export const TableDemo1 = () => {
               key={row.id}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
-              <TableCell component="th" scope="row">
+              <TableCell 
+               component="th" 
+               scope="row" 
+               onClick={()=>navigate("job")}>
                 {row.name}
               </TableCell>
-              <TableCell align="right">{row.username}</TableCell>
+              <TableCell align="right" >{row.username}</TableCell>
               <TableCell align="right">{row.email}</TableCell>
               <TableCell align="right">{row.address.zipcode}</TableCell>
             </TableRow>
