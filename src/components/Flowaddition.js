@@ -4,6 +4,8 @@ import ReactFlow, {
   addEdge,
   ReactFlowProvider
 } from 'react-flow-renderer';
+import CalculateIcon from '@mui/icons-material/Calculate';
+import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 
 export const Flowaddition = () => {
 
@@ -14,10 +16,12 @@ export const Flowaddition = () => {
       type: 'input', // input node
       data:
       {
-        label: <select>
-          <option value='red'>Red</option>
-          <option value='purple'>Purple </option>
-        </select>
+        label: <CalculateIcon/>
+        
+        // <select>
+        //   <option value='red'>Red</option>
+        //   <option value='purple'>Purple </option>
+        // </select>
       },
       position: { x: 245, y: 36 },
       style: {
@@ -25,7 +29,21 @@ export const Flowaddition = () => {
         borderRadius: "25px",
         height: "77px"
       },
-    }
+    },
+    {
+      id: '3',
+      type: 'output', // output node
+      data: { label: 'Output Node' },
+      position: { x: 817, y: 36 },
+      style: {
+        backgroundColor: "whitesmoke",
+        borderRadius: "25px",
+        height: "77px"
+      },
+    },
+
+    { id: 'e1-2', source: '1', target: '2', animated: true },
+    { id: 'e1-23', source: '1', target: '4', animated: true },
   ]
 
   const getNodeId = () => `randomnode_${+new Date()}`;
@@ -36,10 +54,14 @@ export const Flowaddition = () => {
   const onAdd = useCallback(() => {
     const newNode = {
       id: getNodeId(),
-      data: { label: 'Added node' },
+      data: { label: <CalendarTodayIcon/> },
+      type:'default',
       position: {
-        x: Math.random() * window.innerWidth - 100,
-        y: Math.random() * window.innerHeight,
+        // x: Math.random() * window.innerWidth - 100,
+        // y: Math.random() * window.innerHeight,
+        //472.76,37.1204
+        x: 472.76, 
+        y: Math.random() * window.innerHeight
       },
       style: {
         backgroundColor: "whitesmoke",
@@ -48,15 +70,17 @@ export const Flowaddition = () => {
       },
     };
     setElements((els) => els.concat(newNode));
+    console.log(newNode.id);
   }, [setElements]);
-
 
   return (
     <div className='flowaddition'>
       <div style={{ width: '100%', height: '100vh' }}>
         {/* <ReactFlowProvider> */}
           <ReactFlow elements={elements} onConnect={onConnect}>
-            <button className='button' onClick={onAdd}>+</button>
+            <button className='button' onClick={onAdd}>
+            +
+            </button>
           </ReactFlow>
         {/* </ReactFlowProvider> */}
       </div>
