@@ -2,5 +2,19 @@
     margin-left: 70px;
     margin-top: 10px;
     overflow: auto;
+    border: rgba(224, 224, 224, 1) solid 1px;
+}
+
+.table thead {
+    background-color: #F9F6EE;
+}
+
+thead th {
+    border-right: rgba(224, 224, 224, 1) solid 1px;
+    /* text-align: left !important; */
+}
+
+th:last-child {
+    border-right: none;
 }
 
