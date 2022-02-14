@@ -5,13 +5,17 @@ const Flowchart=()=> {
         {
           id: '1',
           type: 'input', // input node
-          data: { label: <select>
-            <option value='red'>Red</option>
-            <option value='purple'>Purple </option>
-          </select> },
+          data: 
+          // { label: <select>
+          //   <option value='red'>Red</option>
+          //   <option value='purple'>Purple </option>
+          // </select> }
+          "Apac_data",
           position: { x: 245, y: 36 },
           style:{
-            backgroundColor: 'red',
+            backgroundColor: "whitesmoke",
+            borderRadius: "25px",
+            height: "77px"
         }
         },
         // default node

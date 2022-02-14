@@ -52,7 +52,7 @@ export const TableDemo1 = () => {
               <TableCell 
                component="th" 
                scope="row" 
-               onClick={()=>navigate("/job")}>
+               onClick={()=>navigate("/connection")}>
                 {row.name}
               </TableCell>
               <TableCell align="right" >{row.username}</TableCell>

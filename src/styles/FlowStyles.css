@@ -8,6 +8,10 @@
     margin-left: 70px;
     border: 1px solid;
     color: blue;
+    position: absolute;
+    top: 27%;
+    left: 21.5%;
+    z-index: 4;
 }
 
 .css-1u2mxbp {
