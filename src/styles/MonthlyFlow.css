@@ -1,0 +1,12 @@
+.monthlyFlowTable{
+    margin-left: 9%;
+    margin-top: 6%;
+    padding-right: 36%;
+    display: flex;
+}
+
+element.style {
+    margin-left: 297px !important;
+    margin-top: 70px !important;
+    margin-right: 341px !important;
+}
