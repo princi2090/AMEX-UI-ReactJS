@@ -17,65 +17,88 @@ const SIDEBAR_NAVS = [
     //     path: '/maps'
     // },
     {
-        name:'Job',
-        path:'/job'
+        name: 'Job',
+        path: '/job'
     },
     {
-        name:'Library',
-        path:'/library'
+        name: 'Library',
+        path: '/library'
     },
     {
-        name:'Connection',
-        path:'/connection'
+        name: 'Connection',
+        path: '/connection'
     },
     {
-        name:'Job History',
-        path:'/jobHistory'
+        name: 'Job History',
+        path: '/jobHistory'
     },
     {
-        name:'Scheduler',
-        path:'/scheduler'
+        name: 'Scheduler',
+        path: '/scheduler'
     },
     {
-        name:'Approvals',
-        path:'/approvals'
+        name: 'Approvals',
+        path: '/approvals'
     }
 ];
 
-const leftsideicons=[
+const leftsideicons = [
     {
-        id:1,
-        tag:MailIcon
+        id: 1,
+        tag: MailIcon
     },
     {
-        id:2,
-        tag:InboxIcon
+        id: 2,
+        tag: InboxIcon
     },
     {
-        id:3,
-        tag:MailIcon
+        id: 3,
+        tag: MailIcon
     },
     {
-        id:4,
-        tag:MailIcon
+        id: 4,
+        tag: MailIcon
     },
     {
-        id:5,
-        tag:MailIcon
+        id: 5,
+        tag: MailIcon
     },
     {
-        id:6,
-        tag:MailIcon
+        id: 6,
+        tag: MailIcon
     },
     {
-        id:7,
-        tag:MailIcon
+        id: 7,
+        tag: MailIcon
     },
     {
-        id:8,
-        tag:MailIcon
+        id: 8,
+        tag: MailIcon
     },
-    
+
 ]
 
-export {SIDEBAR_NAVS,leftsideicons}
+export const APAC_COLUMN_NAMES = [
+    {
+        name: 'cm_11',
+        accessor: 'cm_11'
+    },
+    {
+        name: 'portfolio_cd',
+        accessor: 'portfolio_cd'
+    },
+    {
+        name: 'product_cd',
+        accessor: 'product_cd'
+    },
+    {
+        name: 'state_cd',
+        accessor: 'state_cd'
+    },
+    {
+        name: 'age_cd',
+        accessor: 'age_cd'
+    }
+];
+
+export { SIDEBAR_NAVS, leftsideicons }

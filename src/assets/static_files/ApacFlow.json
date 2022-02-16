@@ -1,0 +1,51 @@
+[
+    {
+        "cm_11": "3700 XXXX XXXX",
+        "portfolio_cd": "P-11187",
+        "product_cd": "21249",
+        "state_cd": "BC",
+        "age_cd": "34"
+    },
+    {
+        "cm_11": "3701 XXXX XXXX",
+        "portfolio_cd": "P-11177",
+        "product_cd": "21240",
+        "state_cd": "BD",
+        "age_cd": "35"
+    },
+    {
+        "cm_11": "3702 XXXX XXXX",
+        "portfolio_cd": "P-11178",
+        "product_cd": "81240",
+        "state_cd": "BE",
+        "age_cd": "45"
+    },
+    {
+        "cm_11": "3703 XXXX XXXX",
+        "portfolio_cd": "P-11278",
+        "product_cd": "81340",
+        "state_cd": "BF",
+        "age_cd": "64"
+    },   
+    {
+        "cm_11": "3704 XXXX XXXX",
+        "portfolio_cd": "P-11378",
+        "product_cd": "81320",
+        "state_cd": "BG",
+        "age_cd": "31"
+    }, 
+    {
+        "cm_11": "3705 XXXX XXXX",
+        "portfolio_cd": "P-12378",
+        "product_cd": "91320",
+        "state_cd": "BH",
+        "age_cd": "20"
+    }, 
+    {
+        "cm_11": "3706 XXXX XXXX",
+        "portfolio_cd": "P-32178",
+        "product_cd": "31920",
+        "state_cd": "BI",
+        "age_cd": "50"
+    } 
+]
