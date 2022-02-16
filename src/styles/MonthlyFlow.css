@@ -10,3 +10,8 @@ element.style {
     margin-top: 70px !important;
     margin-right: 341px !important;
 }
+
+.column_name_div {
+    margin-left: 10%;
+    display: none;
+}
