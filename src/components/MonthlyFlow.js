@@ -55,7 +55,7 @@ export const MonthlyFlow=()=> {
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell>cm_11</TableCell>
+            <TableCell>cm_12</TableCell>
             <TableCell align="right">portfolio_cd</TableCell>
             <TableCell align="right">product_cd</TableCell>
             <TableCell align="right">state_cd</TableCell>
@@ -83,9 +83,43 @@ export const MonthlyFlow=()=> {
         </TableBody>
       </Table>
     </TableContainer>
-    <div > 
-        Hi
+    
+    <div style={{
+      display:"flex",
+      flexDirection:"row",
+      justifyContent:"spaceBetween",
+      position:"absolute",
+      right:"1%",
+      top:"17%"}}> 
+        Recipie
+        <div style={{
+          paddingLeft:"5px"
+        }}>
+          <button style={{width:"134px",height:"28px"}}>Publish</button>
+          <button style={{width:"134px",height:"28px"}}>Version History</button>
+        </div>
     </div>
+      <div style={{
+        position: "relative",
+        left: "227px",
+      }}>
+        <h1>Quality</h1>
+        <h3>Valid</h3>
+        <h3>Mismatched</h3>
+        <h3>Missing</h3>
+        
+        <h1>Suggestions</h1>
+        <TableHead>
+          <TableCell>
+          Rename
+          </TableCell>
+        </TableHead>
+        <TableBody>
+        <TableCell><b>Rename</b> cm_11 to card__member_acount_id_11</TableCell>
+        </TableBody>
+        
+      </div>
+      
     </div>
     </>
   )
