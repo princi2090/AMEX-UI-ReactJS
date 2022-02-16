@@ -43,8 +43,7 @@ export const MonthlyFlow = () => {
   // }, [APAC_COLUMN_NAMES]);
 
   const updateColumnName = () => {
-    console.log(column_name.current.value);
-    APAC_COLUMN_NAMES[0].name = column_name.current.value;
+    APAC_COLUMN_NAMES[columnName.selectedIndex - 1].name = column_name.current.value;
     updateAllColumns([...APAC_COLUMN_NAMES]);
     console.log(all_columns);
   };
@@ -78,7 +77,7 @@ export const MonthlyFlow = () => {
         <BorderColorIcon />
       </div>
       <div className='column_name_div' id='column_name_div'>
-        <select onChange={(e) => { setColumnName(e.target.value); }}>
+        <select onChange={(e) => { setColumnName(e.target); }}>
           <option>Select</option>
           {all_columns.map((column, index) => {
             return (
