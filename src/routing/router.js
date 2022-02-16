@@ -11,6 +11,7 @@ import Flowchart from "./../components/Flowchart"
 import {Flowaddition} from "./../components/Flowaddition"
 import {Library} from "./../components/Library"
 import {TableDemo1} from "./../components/TableDemo1"
+import { MonthlyFlow } from "../components/MonthlyFlow";
 
 export default function RoutesComponent() {
     return (
@@ -32,6 +33,8 @@ export default function RoutesComponent() {
                     <Route path="/scheduler" element={<TableDemo1/>}>
                     </Route>
                     <Route path="/approvals" element={<TableDemo1/>}>
+                    </Route>
+                    <Route path="/monthlyFlow" element={<MonthlyFlow/>}>
                     </Route>
                 </Routes>
             </div>

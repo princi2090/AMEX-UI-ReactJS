@@ -1,4 +1,5 @@
 export const AMEX_LOGO = 'src/assets/images/amex_logo.png';
+export const ApacFlow = "src/assets/images/ApacFlow.json"
 import MailIcon from '@mui/icons-material/Mail';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 
