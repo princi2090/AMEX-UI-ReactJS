@@ -153,7 +153,7 @@ export const MonthlyFlow = () => {
           </TableCell>
         </TableHead>
         <TableBody>
-        <TableCell><b>Rename</b> cm_11 to card__member_acount_id_11</TableCell>
+        <TableCell onClick={updateColumnName}><b>Rename</b> cm_11 to card__member_acount_id_11</TableCell>
         </TableBody>
         </div>
       </div>
