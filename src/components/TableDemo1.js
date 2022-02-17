@@ -16,30 +16,35 @@ import Flowchart from './Flowchart';
 export const TableDemo1 = () => {
 
   const navigate=useNavigate();
+  const FlowTable = "src/assets/static_files/FlowTable.json"
 
   const [data, setTableData] = useState([]);
-  useEffect(() => {
-    api_service.get({
-      baseURL: api_urls.flow_url
-    }).then((res) => {
-      console.log('response data: ', res);
-      setTableData(res.data)
-    });
-  }, [])
+  // useEffect(() => {
+  //   api_service.get({
+  //     baseURL: api_urls.flow_url
+  //   }).then((res) => {
+  //     console.log('response data: ', res);
+  //     setTableData(res.data)
+  //   });
+  // }, [])
 
-  // const clickHandler=()=>{
-  //   console.log("Hello");
-                    
-  // }
+  useEffect(()=>{
+    fetch(FlowTable)
+    .then((res)=>res.json())
+    .then((data)=>setTableData(data))
+  },[]);
 
+  
   return <div className='table'>
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell>Name</TableCell>
+            <TableCell>Flow Names</TableCell>
+            <TableCell align="right">Status</TableCell>
             <TableCell align="right">Owner</TableCell>
-            <TableCell align="right">Email ID</TableCell>
+            <TableCell align="right">Contains</TableCell>
+            <TableCell align="right">Created At</TableCell>
             <TableCell align="right">Last Updated</TableCell>
           </TableRow>
         </TableHead>
@@ -53,11 +58,13 @@ export const TableDemo1 = () => {
                component="th" 
                scope="row" 
                onClick={()=>navigate("/connection")}>
-                {row.name}
+                {row.Flow_Names}
               </TableCell>
-              <TableCell align="right" >{row.username}</TableCell>
-              <TableCell align="right">{row.email}</TableCell>
-              <TableCell align="right">{row.address.zipcode}</TableCell>
+              <TableCell align="right" >{row.Status}</TableCell>
+              <TableCell align="right">{row.Owner}</TableCell>
+              <TableCell align="right">{row.Contains}</TableCell>
+              <TableCell align="right">{row.Created_At}</TableCell>
+              <TableCell align="right">{row.Last_Updated}</TableCell>
             </TableRow>
           ))}
         </TableBody>
