@@ -43,9 +43,11 @@ export const MonthlyFlow = () => {
   // }, [APAC_COLUMN_NAMES]);
 
   const updateColumnName = () => {
-    APAC_COLUMN_NAMES[columnName.selectedIndex - 1].name = column_name.current.value;
-    updateAllColumns([...APAC_COLUMN_NAMES]);
-    console.log(all_columns);
+    if (column_name.current && column_name.current.value) {
+      APAC_COLUMN_NAMES[columnName.selectedIndex - 1].name = column_name.current.value;
+      updateAllColumns([...APAC_COLUMN_NAMES]);
+      console.log(all_columns);
+    }
   };
 
   const displayColumnDiv = () => {
@@ -85,8 +87,8 @@ export const MonthlyFlow = () => {
             );
           })}
         </select>
-        <input type={'text'} ref={column_name} />
-        <Button onClick={updateColumnName}>Update</Button>
+        {columnName && <input placeholder='Alternate Name' type={'text'} ref={column_name} />}
+        {columnName && <Button onClick={updateColumnName}>Update</Button>}
       </div>
       <div className='monthlyFlowTable'>
         <TableContainer component={Paper}>
@@ -122,42 +124,43 @@ export const MonthlyFlow = () => {
           </Table>
         </TableContainer>
         <div >
-        <div style={{
-      display:"flex",
-      flexDirection:"row",
-      justifyContent:"spaceBetween",
-      position:"absolute",
-      right:"1%",
-      top:"17%"}}> 
-        Recipie
-        <div style={{
-          paddingLeft:"5px"
-        }}>
-          <button style={{width:"134px",height:"28px"}}>Publish</button>
-          <button style={{width:"134px",height:"28px"}}>Version History</button>
-        </div>
-    </div>
-      <div style={{
-        position: "relative",
-        left: "227px",
-      }}>
-        <h1>Quality</h1>
-        <h3>Valid</h3>
-        <h3>Mismatched</h3>
-        <h3>Missing</h3>
-        
-        <h1>Suggestions</h1>
-        <TableHead>
-          <TableCell>
-          Rename
-          </TableCell>
-        </TableHead>
-        <TableBody>
-        <TableCell><b>Rename</b> cm_11 to card__member_acount_id_11</TableCell>
-        </TableBody>
+          <div style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "spaceBetween",
+            position: "absolute",
+            right: "1%",
+            top: "17%"
+          }}>
+            Recipe
+            <div style={{
+              paddingLeft: "5px"
+            }}>
+              <button style={{ width: "134px", height: "28px" }}>Publish</button>
+              <button style={{ width: "134px", height: "28px" }}>Version History</button>
+            </div>
+          </div>
+          <div style={{
+            position: "relative",
+            left: "227px",
+          }}>
+            <h1>Quality</h1>
+            <h3>Valid</h3>
+            <h3>Mismatched</h3>
+            <h3>Missing</h3>
+
+            <h1>Suggestions</h1>
+            <TableHead>
+              <TableCell>
+                Rename
+              </TableCell>
+            </TableHead>
+            <TableBody>
+              <TableCell><b>Rename</b> cm_11 to card__member_acount_id_11</TableCell>
+            </TableBody>
+          </div>
         </div>
       </div>
-    </div>
     </>
   )
 }
