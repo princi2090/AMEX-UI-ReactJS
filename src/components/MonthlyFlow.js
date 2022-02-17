@@ -27,17 +27,21 @@ export const MonthlyFlow = () => {
   const [data, setTableData] = useState([]);
   const [columnName, setColumnName] = useState('');
   const [all_columns, updateAllColumns] = useState(APAC_COLUMN_NAMES);
+  const [stored_data,setStoredData]=useState([]);
   const column_name = useRef(null);
+  const navigate=useNavigate();
 
   useEffect(() => {
     fetch(ApacFlow)
       .then((res) => res.json())
       .then((data) => {
         setTableData(data)
+        setStoredData(data);
       });
     displayColumnDiv();
   }, []);
 
+ 
   // useEffect(() => {
   //   console.log('inside use effect', APAC_COLUMN_NAMES[0]);
   // }, [APAC_COLUMN_NAMES]);
@@ -46,7 +50,7 @@ export const MonthlyFlow = () => {
     if (column_name.current && column_name.current.value) {
       APAC_COLUMN_NAMES[columnName.selectedIndex - 1].name = column_name.current.value;
       updateAllColumns([...APAC_COLUMN_NAMES]);
-      console.log(all_columns);
+      // console.log(all_columns);
     }
   };
 
@@ -57,6 +61,14 @@ export const MonthlyFlow = () => {
     } else {
       element.style.display = 'none';
     }
+  }
+
+  const filterColumns=()=>{
+    // let stored_data=[...data];
+    let abc=stored_data
+    .filter((data)=>data.state_cd=='BD' || data.state_cd=='BE');
+    setStoredData([...abc]);
+    console.log(abc);
   }
 
   return (
@@ -75,7 +87,7 @@ export const MonthlyFlow = () => {
         <FactCheckIcon />
         <FormatColorTextIcon />
         <FunctionsIcon onClick={displayColumnDiv} />
-        <FilterAltIcon onClick={() => console.log("Clicked Filter")} />
+        <FilterAltIcon onClick={filterColumns} />
         <BorderColorIcon />
       </div>
       <div className='column_name_div' id='column_name_div'>
@@ -103,7 +115,7 @@ export const MonthlyFlow = () => {
               </TableRow>
             </TableHead>
             <TableBody>
-              {data.map((row, index) => (
+              {stored_data.map((row, index) => (
                 <TableRow
                   key={index}
                   sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
@@ -136,7 +148,12 @@ export const MonthlyFlow = () => {
             <div style={{
               paddingLeft: "5px"
             }}>
-              <button style={{ width: "134px", height: "28px" }}>Publish</button>
+              <button 
+              style={{ width: "134px", height: "28px" }}
+              onClick={()=>navigate("/connection")}
+              >
+              Publish
+              </button>
               <button style={{ width: "134px", height: "28px" }}>Version History</button>
             </div>
           </div>
