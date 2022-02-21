@@ -11,7 +11,6 @@ import Paper from '@mui/material/Paper';
 import { useNavigate } from "react-router-dom";
 import api_service from '../services/api_service';
 import { useState, useEffect } from 'react';
-
 import ViewComfyIcon from '@mui/icons-material/ViewComfy';
 import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
 import FindReplaceIcon from '@mui/icons-material/FindReplace';
@@ -21,6 +20,19 @@ import FunctionsIcon from '@mui/icons-material/Functions';
 import FilterAltIcon from '@mui/icons-material/FilterAlt';
 import BorderColorIcon from '@mui/icons-material/BorderColor';
 import { Button } from '@mui/material';
+
+import icon1 from "../assets/images/icon1.svg"
+import vector from "../assets/images/Vector.svg"
+import grid from "../assets/images/Grid.svg"
+import codicon from "../assets/images/codicon_replace.svg"
+import group627507 from "../assets/images/Group627507.svg"
+import group627509 from "../assets/images/Group627509.svg"
+import Group627510 from "../assets/images/Group627510.svg"
+import Group627548 from "../assets/images/Group627548.svg"
+import Group627511 from "../assets/images/Group627511.svg"
+import Group627549 from "../assets/images/Group627549.svg"
+
+
 
 export const MonthlyFlow = () => {
 
@@ -81,14 +93,32 @@ export const MonthlyFlow = () => {
         marginInline: "6%",
         marginInlineStart: "9%"
       }}>
-        <ViewComfyIcon />
-        <FormatListBulletedIcon />
-        <FindReplaceIcon />
-        <FactCheckIcon />
-        <FormatColorTextIcon />
-        <FunctionsIcon onClick={displayColumnDiv} />
-        <FilterAltIcon onClick={filterColumns} />
-        <BorderColorIcon />
+
+      <div className='firstEle'>
+          <div className='firstGrid'><img src={grid} alt="grid"/></div>
+          <div className='firstVector'><img src={vector} alt="vector"/></div>  
+      </div>
+      <div style={{
+        display:'flex',
+        flexDirection:'column',
+        marginLeft:"10px"
+      }}>
+      <div className='secondEle'>
+        <img src={group627507} alt="group627507"/>
+      </div>
+      <div className='thirdEle'>
+        <img src={group627509} alt="group627509"/>
+      </div>
+      <div className='fourthEle'>
+        <img src={Group627510} alt="Group627510"/>
+      </div> 
+      </div>   
+      <div className='fifthEle'>
+        <img src={Group627511} alt="Group627511"/>
+      </div>
+      <div className='sixthEle'><img src={Group627548} alt="antdesign_filteroutlined"/></div>
+      <div className='seventhEle'><img src={Group627549} alt="icon1"/></div>  
+        
       </div>
       <div className='column_name_div' id='column_name_div'>
         <select onChange={(e) => { setColumnName(e.target); }}>
